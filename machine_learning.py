@@ -12,7 +12,7 @@ prediction.setModelTypeAsResNet50()
 prediction.setModelPath(os.path.join(execution, "resnet50-19c8e357.pth"))
 prediction.loadModel()
 
-predictions, probabilities = prediction.classifyImage(os.path.join(execution, "Godzilla.jpg"), result_count=15)
+predictions, probabilities = prediction.classifyImage(os.path.join(execution, "giraffe.jpg"), result_count=10)
 for eachPrediction, eachProbability in zip(predictions, probabilities):
     print(eachPrediction , " : " , eachProbability)
 
